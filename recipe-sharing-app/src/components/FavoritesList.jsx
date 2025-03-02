@@ -1,8 +1,7 @@
 import { useRecipeStore } from "./recipeStore";
 import { useMemo } from "react";
 
-export const FavoritesList = () => {
-  // Select the favorite IDs and recipes separately from the store
+export default function FavoritesList() {
   const favoritesIds = useRecipeStore((state) => state.favorites);
   const recipes = useRecipeStore((state) => state.recipes);
 
@@ -23,4 +22,4 @@ export const FavoritesList = () => {
       ))}
     </div>
   );
-};
+}

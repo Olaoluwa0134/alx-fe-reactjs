@@ -1,6 +1,6 @@
 import { useRecipeStore } from "./recipeStore";
 
-export const RecommendationsList = () => {
+export default function RecommendationsList () {
   const recommendations = useRecipeStore((state) => state.recommendations);
 
   return (
