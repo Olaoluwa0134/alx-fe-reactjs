@@ -1,21 +1,34 @@
-import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import RecipeDetails from "./pages/RecipeDetails";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AddRecipeForm } from "./components/AddRecipeForm";
+import { RecipeList } from "./components/RecipeList";
+import { RecipeDetails } from "./components/RecipeDetails";
+import { SearchBar } from "./components/SearchBar";
+import { FavoritesList } from "./components/FavoritesList";
+import { RecommendationsList } from "./components/RecommendationsList";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/recipe/:id" element={<RecipeDetails />} />
-      </Routes>
-    </div>
+    <Router>
+      <div>
+        <h1>Recipe Sharing App</h1>
+        <SearchBar />
+        <AddRecipeForm />
+        <FavoritesList />
+        <RecommendationsList />
+        <Routes>
+          <Route path="/" element={<RecipeList />} />
+          <Route
+            path="/recipe/:id"
+            element={
+              <RecipeDetails
+                recipeId={window.location.pathname.split("/").pop()}
+              />
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;
