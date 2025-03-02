@@ -8,7 +8,9 @@ const Navbar = () => {
         style={{
           display: "flex",
           justifyContent: "space-evenly",
-          width: "200px",
+          width: "300px",
+          backgroundColor: "#cdcdcd",
+          color: "white",
         }}
       >
         <NavLink to="/home">Home</NavLink>
