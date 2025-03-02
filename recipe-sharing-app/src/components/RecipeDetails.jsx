@@ -2,7 +2,7 @@ import { useRecipeStore } from "./recipeStore";
 import { EditRecipeForm } from "./EditRecipeForm";
 import { DeleteRecipeButton } from "./DeleteRecipeButton";
 
-export const RecipeDetails = ({ recipeId }) => {
+export default function RecipeDetails({ recipeId }) {
   const recipe = useRecipeStore((state) =>
     state.recipes.find((recipe) => recipe.id === Number(recipeId))
   );
@@ -17,4 +17,4 @@ export const RecipeDetails = ({ recipeId }) => {
       <DeleteRecipeButton recipeId={recipe.id} />
     </div>
   );
-};
+}
