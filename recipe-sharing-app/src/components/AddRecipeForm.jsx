@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRecipeStore } from "./recipeStore";
 
-export const AddRecipeForm = () => {
+export default function AddRecipeForm() {
   const addRecipe = useRecipeStore((state) => state.addRecipe);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -29,4 +29,4 @@ export const AddRecipeForm = () => {
       <button type="submit">Add Recipe</button>
     </form>
   );
-};
+}

@@ -1,7 +1,7 @@
 import { useRecipeStore } from "./recipeStore";
 import { Link } from "react-router-dom";
 
-export const RecipeList = () => {
+export default function RecipeList () {
   const filteredRecipes = useRecipeStore((state) => state.filteredRecipes);
 
   return (
