@@ -1,6 +1,6 @@
 function UserProfile() {
   return (
-    <div className="user-profile b-gray-100 p-8 max-w-sm mx-auto my-20 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration:200 ease-in-out">
+    <div className="user-profile bg-gray-100 p-8 max-w-sm mx-auto my-20 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration:200 ease-in-out">
       <img
         src="https://placehold.co/400"
         alt="User"
