@@ -4,7 +4,7 @@ function UserProfile() {
       <img
         src="https://placehold.co/400"
         alt="User"
-        className="rounded-full sm:2-24 sm:h-24 md:w-36 md:h-36  mx-auto hover:scale-110 transition-transform duration-300 ease-in-out"
+        className="rounded-full sm:w-24 sm:h-24 md:w-36 md:h-36  mx-auto hover:scale-110 transition-transform duration-300 ease-in-out"
       />
       <h1 className="md:text-xl sm:text-lg text-blue-800 my-4 hover:text-blue-500">
         John Doe
